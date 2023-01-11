@@ -19,8 +19,8 @@ const app = Vue.createApp({
       .then((res) => {
         console.log(res);
         const { expired, token } = res.data
-        document.cookie = `hexToken=${ token };expired=${ new Date(expired) }`
-        window.location.href='product.html'
+        document.cookie = `hexToken=${ token };expires=${ new Date(expired) }`
+        window.location='products.html'
         
       })
       .catch((err) => {
